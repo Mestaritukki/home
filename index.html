@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<script src="sha256.min.js"></script>
+<script>
+// Function to detect if the user is on a mobile device
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Redirect to mobile.html if the user is on a mobile device
+if (isMobileDevice()) {
+    window.location.href = 'mobile.html';
+}
+</script>
+    <div class="spawn-grid"></div>
+    <div class="login-container">
+        <form id="loginForm">
+            <input type="text" class="login-input" id="usernameInput" placeholder="Username">
+            <br>
+            <input type="password" class="login-input" id="passwordInput" placeholder="Password">
+            <br>
+            <button type="button" class="login-button" onclick="loginUser()">Log In</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

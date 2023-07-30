@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            color: #00FF00;
+            font-size: 20px; /* Constant font size for characters */
+            position: relative;
+            font-family: monospace;
+        }
+        .matrix-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 20px;
+            border-radius: 0; /* Remove rounded edges */
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 2;
+            animation: fadeIn linear; /* Add fadeIn animation */
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0; /* Start with 0% opacity */
+            }
+            100% {
+                opacity: 1; /* End with 100% opacity */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-container">
+        <h1>You are in</h1>
+    </div>
+    <script>
+        // Function to detect if the user is on a mobile device
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Redirect to mobile.html if the user is on a mobile device
+        if (isMobileDevice()) {
+            window.location.href = 'mobile.html';
+        }
+    </script>
+</body>
+</html>
